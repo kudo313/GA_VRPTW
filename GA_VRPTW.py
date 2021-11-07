@@ -16,7 +16,6 @@ capacity  = 0
 service_time = []
 f_read_name = open("name_data.txt")
 name_data = f_read_name.readline().split()[0]
-print(name_data)
 f_name = "In/" + name_data
 file = open(f_name, "r")
 line_count = 0
@@ -512,8 +511,6 @@ while number_of_non_ranking_vectors != 0:
             number_of_non_ranking_vectors -= 1
     #
     cur_rank += 1
-print(ranking_of_pop)
-print(pareto_vectors)
 for i in range(len(ranking_of_pop)):
 
     if ranking_of_pop[i] == 1:
@@ -527,9 +524,6 @@ for i in range(len(ranking_of_pop)):
             x.append(coor_matrix[0][0])
             y.append(coor_matrix[0][1])
             plt.plot(x,y)
-        print(i)
-        print(pareto_vectors[i])
-        print(all_current_routes[i])
         break
 plt.show()
 
